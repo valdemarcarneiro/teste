@@ -1,0 +1,10 @@
+<po-page-default p-title="Products">
+  <po-button p-label="Add Product" (p-click)="addProduct()"></po-button>
+  <po-table
+    [p-columns]="columns"
+    [p-items]="products"
+    [p-actions]="actions"
+    [p-striped]="true"
+    [p-sort]="true"
+  ></po-table>
+</po-page-default>

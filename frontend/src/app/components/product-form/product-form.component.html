@@ -1,0 +1,23 @@
+<po-page-default [p-title]="isEditMode ? 'Edit Product' : 'New Product'">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <po-input
+      formControlName="name"
+      p-label="Name"
+      p-required="true"
+    ></po-input>
+    <po-input
+      formControlName="description"
+      p-label="Description"
+      p-required="true"
+    ></po-input>
+    <po-number
+      formControlName="price"
+      p-label="Price"
+      p-required="true"
+    ></po-number>
+    <po-button-group>
+      <po-button p-label="Save" [p-disabled]="productForm.invalid" (p-click)="onSubmit()"></po-button>
+      <po-button p-label="Cancel" (p-click)="cancel()"></po-button>
+    </po-button-group>
+  </form>
+</po-page-default>
