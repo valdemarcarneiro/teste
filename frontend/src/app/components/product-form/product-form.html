@@ -1,0 +1,26 @@
+<div class="card">
+  <h2>{{ isEditMode ? 'Editar Produto' : 'Novo Produto' }}</h2>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col-12 p-md-6">
+        <label for="nome">Nome</label>
+        <input pInputText id="nome" formControlName="nome" />
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="preco">Preço</label>
+        <p-inputNumber id="preco" formControlName="preco" mode="currency" currency="BRL" locale="pt-BR"></p-inputNumber>
+      </div>
+      <div class="p-field p-col-12">
+        <label for="descricao">Descrição</label>
+        <p-editor formControlName="descricao" [style]="{ 'height': '320px' }"></p-editor>
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="quantidadeEmEstoque">Quantidade em Estoque</label>
+        <p-inputNumber id="quantidadeEmEstoque" formControlName="quantidadeEmEstoque"></p-inputNumber>
+      </div>
+    </div>
+    <div class="p-d-flex p-jc-end p-mt-4">
+      <p-button type="submit" label="Salvar" [disabled]="productForm.invalid"></p-button>
+    </div>
+  </form>
+</div>
