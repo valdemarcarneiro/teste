@@ -20,8 +20,8 @@ import { ButtonModule } from 'primeng/button';
     EditorModule,
     ButtonModule
   ],
-  templateUrl: './product-form.html',
-  styleUrls: ['./product-form.scss']
+  templateUrl: './product-form.component.html',
+  styleUrls: ['./product-form.component.scss']
 })
 export class ProductFormComponent implements OnInit {
   productForm: FormGroup;

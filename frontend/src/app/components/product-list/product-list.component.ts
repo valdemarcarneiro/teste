@@ -22,8 +22,8 @@ import { ProdutoService } from '../../services/produto.service';
     ConfirmDialogModule,
     ToastModule
   ],
-  templateUrl: './product-list.html',
-  styleUrls: ['./product-list.scss'],
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss'],
   providers: [ConfirmationService, MessageService]
 })
 export class ProductListComponent implements OnInit {
